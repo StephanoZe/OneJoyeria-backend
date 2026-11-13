@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "One Joyería (MySQL en Docker)",
+            "request": "launch",
+            "mainClass": "pe.onejoyeria.OneJoyeriaApplication",
+            "projectName": "one-joyeria",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "One Joyería sin Docker (H2)",
+            "request": "launch",
+            "mainClass": "pe.onejoyeria.OneJoyeriaApplication",
+            "projectName": "one-joyeria",
+            "cwd": "${workspaceFolder}",
+            "args": "--spring.profiles.active=h2"
+        }
+    ]
+}

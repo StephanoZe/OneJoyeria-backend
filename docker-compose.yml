@@ -1,0 +1,19 @@
+# MySQL para One Joyería
+#   Levantar:  docker compose up -d
+#   Detener:   docker compose down        (los datos se conservan en el volumen)
+#   Borrar datos y empezar de cero:  docker compose down -v
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: onejoyeria-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: onejoyeria
+      TZ: America/Lima
+    ports:
+      - "3306:3306"
+    volumes:
+      - onejoyeria-datos:/var/lib/mysql
+
+volumes:
+  onejoyeria-datos:
